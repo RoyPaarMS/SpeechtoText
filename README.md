@@ -9,3 +9,5 @@ This Power Automate flow uses the http connector.  The following prerequisites m
 2. Data Loss Prevention Policies (DLPs) must allow use of http connector
 3. You must have an Azure Speech to Text service provisioned in your Azure tenant.  The service must be available to the public.  There is a free tier.
 4. The flow is currently set at the User scope.  If you want other users to be able to use this functionality, consider setting the trigger step in the flow at a broader scope.
+5. Recording audio from one of the D365 mobile apps (field service mobile, etc.) will automatically add a .wav file to your note.  I have not tried this in a canvas app - there may be some conversion required.
+6. There are three environment variables to set when publishing - language (i.e. en-US), region (i.e. cenralus), and you Azure Speech to Text key (you must get this from Azure after you provision your service).  Key 1 or Key 2 should work.
